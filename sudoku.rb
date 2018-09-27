@@ -1,3 +1,5 @@
+require "colorize"
+
 class Board
   def self.empty_grid
     Array.new(9) do
@@ -99,6 +101,7 @@ class Tile
   end
 
   def to_s
+    # debugger
     value == 0 ? " " : value.to_s.colorize(color)
   end
 
@@ -109,6 +112,7 @@ class Tile
       @value = new_value
     end
   end
+end
 
 class SudokuGame
   def self.from_file(filename)
