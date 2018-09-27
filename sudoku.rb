@@ -54,7 +54,7 @@ class SudokuGame
   end
 
   def run
-    play_turn until solved?
+    self.play_turn until solved?
     board.render
     puts "Congratulations, you win!"
   end
@@ -80,3 +80,4 @@ end
 
 
 game = SudokuGame.from_file("puzzles/sudoku1.txt")
+game.run
