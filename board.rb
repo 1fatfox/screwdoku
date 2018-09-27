@@ -22,6 +22,7 @@ class Board
   end
 
   def [](pos)
+
     x, y = pos
     grid[x][y]
   end
@@ -81,5 +82,5 @@ class Board
   end
 
   private
-  attr_reader :grid
+  attr_accessor :grid
 end
